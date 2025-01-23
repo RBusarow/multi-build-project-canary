@@ -3,6 +3,8 @@ pluginManagement {
     gradlePluginPortal()
     mavenCentral()
   }
+  includeBuild("build-logic/conventions")
+  includeBuild("build-logic/settings")
 }
 
 dependencyResolutionManagement {
