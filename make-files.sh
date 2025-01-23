@@ -22,6 +22,9 @@ for file in \
   kotlin(\"jvm\") version \"2.0.21\"
 }
 
+val myProperty by project.properties
+println(\"myProperty: \$myProperty\")
+
 dependencies {
   testImplementation(kotlin(\"test-junit\"))
 }
@@ -52,7 +55,7 @@ for file in \
   cd "./$file"
   ln -nfs ../../gradlew gradlew
   ln -nfs ../../gradlew.bat gradlew.bat
-  ln -nfs ../../gradlew.properties gradlew.properties
+  ln -nfs ../../gradle.properties gradle.properties
 
   ln -nfs ../../../../gradle/wrapper/gradle-wrapper.properties gradle/wrapper/gradle-wrapper.properties
   ln -nfs ../../../../gradle/wrapper/gradle-wrapper.jar gradle/wrapper/gradle-wrapper.jar
@@ -69,7 +72,7 @@ for file in \
   cd "./$file"
   ln -nfs ../gradlew gradlew
   ln -nfs ../gradlew.bat gradlew.bat
-  ln -nfs ../gradlew.properties gradlew.properties
+  ln -nfs ../gradle.properties gradle.properties
 
   ln -nfs ../../../gradle/wrapper/gradle-wrapper.properties gradle/wrapper/gradle-wrapper.properties
   ln -nfs ../../../gradle/wrapper/gradle-wrapper.jar gradle/wrapper/gradle-wrapper.jar
